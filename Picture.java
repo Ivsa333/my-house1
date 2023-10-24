@@ -106,4 +106,12 @@ public class Picture
             cesped.changeColor("green");
         }
     }
+    /**
+     * Ciclo nocturno
+     */
+    public void Amanecer()
+    {
+        moon.slowMoveVertical(300);
+        sun.slowMoveVertical(-300);
+    }
 }
