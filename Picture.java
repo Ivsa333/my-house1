@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle moon;
+    private Square cesped;
     
     /**
      * Constructor for objects of class Picture
@@ -51,8 +52,8 @@ public class Picture
 
         sun = new Circle();
         sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
+        sun.moveHorizontal(-45);
+        sun.moveVertical(-90);
         sun.changeSize(80);
         sun.makeVisible();
         
@@ -60,8 +61,18 @@ public class Picture
         moon.makeVisible();
         moon.changeColor("magenta");
         moon.changeSize(50);
-        moon.moveHorizontal(-150);
-        moon.moveVertical(-50);
+        moon.moveHorizontal(-40);
+        moon.moveVertical(230);
+        
+        cesped = new Square();
+        cesped.makeVisible();
+        cesped.changeColor("green");
+        cesped.changeSize(600);
+        cesped.moveHorizontal(-325);
+        cesped.moveVertical(100);
+        
+        sun.slowMoveVertical(300);
+        moon.slowMoveVertical(-300);
     }
 
     /**
@@ -76,6 +87,7 @@ public class Picture
             roof.changeColor("black");
             sun.changeColor("black");
             moon.changeColor("black");
+            cesped.changeColor("black");
         }
     }
 
@@ -91,6 +103,7 @@ public class Picture
             roof.changeColor("green");
             sun.changeColor("yellow");
             moon.changeColor("magenta");
+            cesped.changeColor("green");
         }
     }
 }
