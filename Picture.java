@@ -17,6 +17,8 @@ public class Picture
     private Circle sun;
     private Circle moon;
     private Square cesped;
+    private Person persona1;
+    private Person persona2;
     
     /**
      * Constructor for objects of class Picture
@@ -71,6 +73,20 @@ public class Picture
         cesped.moveHorizontal(-325);
         cesped.moveVertical(100);
         
+        persona1 = new Person();
+        persona1.makeInvisible();
+        persona1.changeColor("black");
+        persona1.changeSize(60,30);
+        persona1.moveVertical(-10);
+        persona1.moveHorizontal(-300);
+        
+        persona2 = new Person();
+        persona2.makeInvisible();
+        persona2.changeColor("red");
+        persona2.changeSize(60,30);
+        persona2.moveVertical(-10);
+        persona2.moveHorizontal(250);
+        
         sun.slowMoveVertical(300);
         moon.slowMoveVertical(-300);
     }
@@ -109,9 +125,13 @@ public class Picture
     /**
      * Ciclo nocturno
      */
-    public void Amanecer()
+    public void amanecer()
     {
         moon.slowMoveVertical(300);
         sun.slowMoveVertical(-300);
+        persona1.makeVisible();
+        persona2.makeVisible();
+        persona1.slowMoveHorizontal(200);
+        persona2.slowMoveHorizontal(-210);
     }
 }
